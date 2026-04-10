@@ -153,7 +153,7 @@ tabs = st.tabs(["🎤 Studio Booth", "🎮 Swar-Match", "📈 Leaderboard"])
 with tabs[0]:
     st.markdown("<h1 style='text-align: center; color: #00d2ff !important; font-size: 2.5rem;'>VOCALVEDA AI STUDIO</h1>", unsafe_allow_html=True)
     with st.sidebar:
-        st.markdown("<h2 style='color: #00d2ff !important;'>🔱 Tanpura Droid</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color: #00d2ff !important;'>🪕 Tanpura Droid</h2>", unsafe_allow_html=True)
         t_files = sorted([f for f in os.listdir(TANPURA_DIR) if f.endswith(('.mp3', '.wav'))])
         if t_files:
             file_map = {f.replace('_', ' ').split('.')[0]: f for f in t_files}
@@ -194,7 +194,7 @@ with tabs[0]:
                 wav_io = io.BytesIO(); audio_data.export(wav_io, format="wav"); wav_io.seek(0)
                 y_u, sr = librosa.load(wav_io, sr=22050)
                 st.audio(rec['bytes'])
-                if st.button("Generate Performance Report 🚀"):
+                if st.button("Generate Performance Score 🚀"):
                     with st.spinner("AI Analysis..."):
                         if sel_s == "Free-style (No Reference)":
                             found_raga, coach_tips = identify_raga_logic(y_u, sr)
