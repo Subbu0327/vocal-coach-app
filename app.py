@@ -22,7 +22,7 @@ for folder in [LIBRARY_DIR, TANPURA_DIR]:
 if 'playing_ref' not in st.session_state:
     st.session_state.playing_ref = False
 
-st.set_page_config(page_title="VocalCoach AI Pro", layout="wide", page_icon="🎤")
+st.set_page_config(page_title="VocalVeda AI Score Generator", layout="wide", page_icon="🎤")
 
 # --- 2. STUDIO UI CSS (WITH BRANDING SHIELD) ---
 st.markdown("""
@@ -88,7 +88,7 @@ def play_bg_audio(file_path, loop=True):
 tabs = st.tabs(["🎤 Studio Booth", "📈 Leaderboard"])
 
 with tabs[0]:
-    st.markdown("<h1 style='color: #00d2ff; text-align: center; text-shadow: 0 0 15px #00d2ff;'>VocalVeda AI Score Studio</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color: #00d2ff; text-align: center; text-shadow: 0 0 15px #00d2ff;'>VocalVeda AI Score Generator</h1>", unsafe_allow_html=True)
     
     with st.sidebar:
         st.markdown("<h2 style='color: #00d2ff;'>🔱 Tanpura Droid</h2>", unsafe_allow_html=True)
