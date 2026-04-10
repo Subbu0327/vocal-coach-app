@@ -248,7 +248,7 @@ with tabs[2]:
 # --- FLOATING ATTRATIVE CONTACT CARD ---
 st.markdown("""
     <div class="floating-contact">
-        <h3 style="margin:0; color:#00d2ff;">🔱 Connect with Me</h3>
+        <h3 style="margin:0; color:#00d2ff;">🎹 & 🎶 Connect with Me</h3>
         <p style="font-size: 0.9rem; margin-top:10px; color:#ffffff;">Drop a message for one-on-one classes and live music sessions!</p>
         <a class="contact-link" href="https://www.instagram.com/subramanya__kashyap?igsh=bTFvbHJ1NTRrMmll&utm_source=qr" target="_blank">📸 INSTAGRAM</a>
         <a class="contact-link" href="mailto:subramanyasambhu@gmail.com">📩 EMAIL ME</a>
