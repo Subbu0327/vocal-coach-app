@@ -2,7 +2,6 @@ streamlit
 librosa
 numpy
 pandas
-matplotlib
 streamlit-mic-recorder
 pydub
-scipy
+matplotlib
