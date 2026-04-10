@@ -24,9 +24,15 @@ if 'playing_ref' not in st.session_state:
 
 st.set_page_config(page_title="VocalCoach AI Pro", layout="wide", page_icon="🎤")
 
-# --- 2. STUDIO UI CSS ---
+# --- 2. STUDIO UI CSS (WITH BRANDING SHIELD) ---
 st.markdown("""
     <style>
+    /* HIDE STREAMLIT BRANDING & TOOLBARS */
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    [data-testid="stHeader"] {display: none;}
+    
     @keyframes gradientBG {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
@@ -167,7 +173,7 @@ with tabs[0]:
                         res = {"Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"), "Name": u_name, "Song": sel_s, "Score": pitch_score}
                         pd.concat([pd.read_csv(RESULTS_FILE) if os.path.exists(RESULTS_FILE) else pd.DataFrame(), pd.DataFrame([res])], ignore_index=True).to_csv(RESULTS_FILE, index=False)
 
-    # --- FOOTER (Connect Card on Bottom Right) ---
+    # --- FOOTER ---
     st.markdown("<br><br>", unsafe_allow_html=True)
     _, _, footer_col = st.columns([1, 1, 1.2])
     with footer_col:
