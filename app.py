@@ -98,7 +98,7 @@ def save_score(name, song, score):
     pd.concat([df, entry], ignore_index=True).to_csv(RESULTS_FILE, index=False)
 
 # --- 4. INTERFACE ---
-tabs = st.tabs(["🎤 Studio Booth", "🎮 Swar-Match", "📈 Leaderboard"])
+tabs = st.tabs(["🎤 Studio Booth", "🎮 Swara-Match", "📈 Leaderboard"])
 
 with tabs[0]:
     st.markdown("<h1 style='text-align: center;'>VOCALVEDA AI STUDIO</h1>", unsafe_allow_html=True)
@@ -158,7 +158,7 @@ with tabs[0]:
                         save_score(u_name, sel_s, score)
 
 with tabs[1]:
-    st.write("## 🎮 Swar-Match Challenge")
+    st.write("## 🎮 Swara-Match Challenge")
     if st.session_state.game_finished:
         st.markdown("<div class='studio-card' style='text-align:center; border-color:#ffd700;'><h2>🏆 Champion!</h2><p>You mastered all levels.</p></div>", unsafe_allow_html=True)
         if st.button("Restart"): st.session_state.game_level = 1; st.session_state.game_finished = False; st.rerun()
